@@ -1,0 +1,40 @@
+body {
+    background: #353433;
+}
+
+.main {
+  background: #eee;
+  position: relative;
+  width: 960px;
+  height: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.element { position: absolute; }
+.instruction { font: 11px Verdana, sans-serif; }
+.instruction.active { font-weight: bold; background: #fff }
+.eip { font: 10px Verdana, sans-serif; text-align: right; }
+
+.stack { background: #ccc; font: 14px Verdana, sans-serif; text-align: center; border: 1px solid #bbb; }
+.stack.out-of-stack { opacity: 0.3; }
+.stack.active { background: white; }
+.address { font: 11px Verdana, sans-serif; text-align: right; color: #999; }
+.address-left { text-align: left; }
+.comment { background: #777; color: #fff; font: bold 15px Arial, Helvetica, sans-serif; text-align: center; }
+.output { font: 14px Arial, Helvetica, sans-serif; }
+
+.register-value { background: #fff; border: 1px solid #aaa; text-align: center; font: 17px Verdana, sans-serif; }
+.diff { background: #ffa }
+.pole { background: #888; }
+.disc { background: #ccc; }
+
+.read { color: blue; }
+.write { color: red; font-weight: bold; }
+
+.instruction-name { color: #609; }
+.syn-immediate { color: #066; }
+.syn-register { color: #660; }
+
+.running-cycle { font: 20px Verdana, sans-serif; text-align: right; }
+
