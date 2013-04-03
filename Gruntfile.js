@@ -168,6 +168,7 @@ module.exports = function (grunt) {
             html: '<%= yeoman.app %>/index.html',
             options: {
                 dest: '<%= yeoman.dist %>'
+              , dirs: ['<%= yeoman.app %>', '.tmp']
             }
         },
         usemin: {
@@ -227,7 +228,19 @@ module.exports = function (grunt) {
                     dest: '<%= yeoman.dist %>',
                     src: [
                         '*.{ico,txt}',
-                        '.htaccess'
+                        '.htaccess',
+                        '*.html',
+                        'styles/*.css',
+                        'scripts/*.js',
+                        'components/*/*.{js,css}'
+                    ]
+                }, {
+                    expand: true,
+                    dot: true,
+                    cwd: '.tmp',
+                    dest: '<%= yeoman.dist %>',
+                    src: [
+                        'scripts/*.js'
                     ]
                 }]
             }
@@ -268,15 +281,15 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'clean:dist',
         'coffee',
-        'compass:dist',
+        /*'compass:dist',
         'useminPrepare',
         'imagemin',
         'htmlmin',
         'concat',
         'cssmin',
-        'uglify',
         'copy',
-        'usemin'
+        'usemin'*/
+        'copy'
     ]);
 
     grunt.registerTask('default', [
